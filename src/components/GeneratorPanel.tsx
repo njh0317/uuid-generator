@@ -4,7 +4,7 @@ import { generateBulk } from '../lib/uuid-generator';
 import { PredefinedNamespace } from '../lib/constants';
 import { isCryptoAvailable } from '../utils/crypto-utils';
 import { copyToClipboard } from '../utils/clipboard';
-import { applyFormat, formatMultipleUUIDs } from '../utils/format-utils';
+import { formatMultipleUUIDs } from '../utils/format-utils';
 import { OutputDisplay } from './OutputDisplay';
 import { FormatControls } from './FormatControls';
 import { NamespaceInput } from './NamespaceInput';
