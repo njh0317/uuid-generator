@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# UUID / GUID Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A free, secure, and feature-rich UUID/GUID generator web application.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ **Multiple UUID Versions**: Support for UUID v1, v3, v4, v5, v7, Nil, and GUID
+- ✅ **Bulk Generation**: Generate up to 100 UUIDs at once
+- ✅ **Namespace Support**: UUID v3/v5 with predefined and custom namespaces
+- ✅ **Format Options**: Customize output with hyphens, case, and line breaks
+- ✅ **Clipboard Integration**: Copy individual or all UUIDs with SVG icons
+- ✅ **File Export**: Download as TXT or JSON
+- ✅ **Validator & Analyzer**: Validate and analyze UUID details
+- ✅ **Converter**: Transform UUIDs between formats
+- ✅ **FAQ**: Comprehensive frequently asked questions
+- ✅ **Privacy First**: 100% client-side, no data transmission
+- ✅ **Dark Mode**: Toggle between light and dark themes
+- ✅ **Responsive Design**: Works on mobile and desktop
+- ✅ **Accessibility**: Full keyboard navigation and ARIA labels
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19 + TypeScript
+- **Build Tool**: Vite 5
+- **Styling**: CSS Modules
+- **Crypto**: Web Crypto API
+- **Hash**: crypto-js (MD5/SHA-1)
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Install dependencies
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Run development server
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Build for production
+npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is configured for Cloudflare Pages deployment:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Build command: `npm run build`
+- Build output: `dist`
+- Framework: Vite (auto-detected)
+
+## Security
+
+- All UUID generation uses the Web Crypto API for cryptographically secure randomness
+- No data is stored or transmitted to any server
+- HTTPS required for secure operation
+- Client-side only processing
+
+## License
+
+© 2026 wisdomslab.com All rights reserved.
+
+## Links
+
+- [About](https://uuid-generator.pages.dev)
+- [Privacy Policy](https://uuid-generator.pages.dev)
+- [Terms of Service](https://uuid-generator.pages.dev)
+- [Disclaimer](https://uuid-generator.pages.dev)
